@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>jogo#</title>
+        <style>
+            td {
+                width: 100px;
+                height: 100px;
+                background-color: lightblue;
+                text-align: center;
+                font-size: 70px;
+            }
+            td:hover {
+                background-color: bisque;
+                cursor: pointer;
+                transition: 500ms;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>jogo da velha</h1>
+        <table>
+            <tr>
+                <td onclick="marca(this)"></td>
+                <td onclick="marca(this)"></td>
+                <td onclick="marca(this)"></td>
+            </tr>
+            <tr>
+                <td onclick="marca(this)"></td>
+                <td onclick="marca(this)"></td>
+                <td onclick="marca(this)"></td>
+            </tr>
+            <tr>
+                <td onclick="marca(this)"></td>
+                <td onclick="marca(this)"></td>
+                <td onclick="marca(this)"></td>
+            </tr>
+        </table>
+        <script>
+            var jogador = "X"
+            function marca(td){
+                td.innerHTML = jogador
+                if(jogador == "X"){
+                    jogador = "0"
+                } else { jogador = "X"}
+            }
+        </script>
+    </body>
+</html>
